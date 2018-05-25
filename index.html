@@ -18,45 +18,14 @@
         <header>
           <section class="diaporama container"><!-- le diaporama ou plutôt son conteneur -->
 
-            <section class="diapo">
-              <figure>
-                <img src="img/navigation.jpg">
-              </figure>
-              <figcaption>
-
-              </figcaption>
-            </section>
-
-            <section class="diapo">
-              <figure>
-                <img src="img/navigation.jpg">
-              </figure>
-              <figcaption>
-
-              </figcaption>
-            </section>
-
-            <section class="diapo">
-              <figure>
-                <img src="img/navigation.jpg">
-              </figure>
-              <figcaption>
-              </figcaption>
-            </section>
-
             <!-- boutons de direction -->
-
-            <a class="prec">&#10094;</a>
-            <a class="suiv">&#10095;</a>
-          </section><!-- fin du conteneur du diaporama -->
-          <br>
-
-          <!-- indicateur de position -->
-          <section class="text-center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <section class="controls">
+            <a class="prec" id="prev">&#10094;</a>
+            <a class="suiv" id="next">&#10095;</a>
           </section>
+
+          </section><!-- fin du conteneur du diaporama -->
+
         </header>
 
         <section class="content container"><!-- position de la carte des vélos -->
@@ -68,6 +37,8 @@
         </footer>
       </section>
     </section>
-    <script src="js/diaporam.js"></script>
+    <!-- importation de jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   </body>
+    <script src="js/diaporama.js"></script>
 </html>
