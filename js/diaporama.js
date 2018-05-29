@@ -35,6 +35,7 @@ suivant();
 */
 function Image(params){
   this.url = params.url;
+  this.altText = params.altText;
 }
 
 function textContent(params){
@@ -43,27 +44,27 @@ function textContent(params){
 
 function Slider(params){
   this.dataTab = params.dataTab;
-  this.container = params.container || 'diaporama';
-  this.dataContainer = document.getElementsByClassName(this.container);
+  this.dataContainer = document.getElementById('container') || null;
 
-  this.addElt : function(){
-    this.dataTab = new Image();
-    this.dataTab.push();
-    this.dataTab = new textContent();
-    this.dataTab.push();
+  this.addElt = function(url){
+    this.dataTab.push(new Image(url));
   }
 
-  this.affSlider : function(){
-    if (this.dataContainer.length === 0) {
-      this.dataContainer = new addElt();
-      this.dataContainer.innerHTML = this.container;
+  this.affSlider = function(){
+    if (this.dataContainer === null) {
+      $('.diaporama').append("<div id='container'> </div>");
     }
     else {
-      this.dataContainer.innerHTML = this.container;
+      this.dataContainer.innerHTML = '<img src="'+this.dataTab[0].url + '"alt="'+ this.dataTab[0].altText+ '"/>';
     }
-    this.dataContainer.innerHTML = new addElt;
 
   }
+
 }
 
- 
+$(document).ready(function(){
+  var monSlider = new Slider({
+    dataTab: [new Image({url: "img/navigation.jpg", altText: "Image de google"})]
+  });
+  monSlider.affSlider();
+});
