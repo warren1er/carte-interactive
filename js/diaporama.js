@@ -47,10 +47,23 @@ function Slider(params){
   this.dataContainer = document.getElementsByClassName(this.container);
 
   this.addElt : function(){
-
+    this.dataTab = new Image();
+    this.dataTab.push();
+    this.dataTab = new textContent();
+    this.dataTab.push();
   }
 
   this.affSlider : function(){
+    if (this.dataContainer.length === 0) {
+      this.dataContainer = new addElt();
+      this.dataContainer.innerHTML = this.container;
+    }
+    else {
+      this.dataContainer.innerHTML = this.container;
+    }
+    this.dataContainer.innerHTML = new addElt;
 
   }
 }
+
+ 
