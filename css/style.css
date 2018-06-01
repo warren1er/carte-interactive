@@ -1,8 +1,13 @@
 * {box-sizing:border-box}
 
+/*definition des tailles des images */
+img{
+  width: 500px; 
+}
+
 /* Slideshow container */
 .diaporama{
-  max-width: 1000px;
+  max-width: 500px;
   position: relative;
   margin: auto;
 }
