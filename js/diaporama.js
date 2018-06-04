@@ -54,6 +54,8 @@ function Slider(params){
 }
 
 
+/****************************************************/
+
 
 $(document).ready(function(){
   var monSlider = new Slider({
@@ -74,8 +76,23 @@ $(document).ready(function(){
   nextBouton.addEventListener('click',function(){
     monSlider.suiv();
   });
+
   var precBouton = document.getElementById('prev');
   precBouton.addEventListener('click',function(){
     monSlider.precedent();
   });
+
+  document.onkeydown = function(e){
+    switch (e.key) {
+      case 'ArrowLeft':
+          monSlider.precedent();
+        break;
+      case 'ArrowRight':
+          monSlider.suiv();
+        break;
+      default:
+        console.log("erreur de code");
+    }
+  };
+
 });
