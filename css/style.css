@@ -2,7 +2,7 @@
 
 /*definition des tailles des images */
 img{
-  width: 500px; 
+  width: 500px;
 }
 
 /* Slideshow container */
@@ -69,4 +69,10 @@ img{
 
 .active, .dot:hover {
   background-color: #717171;
+}
+
+/************** map **********/
+#map{
+  height: 400px;
+  width: 640px
 }
