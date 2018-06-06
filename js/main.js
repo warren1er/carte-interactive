@@ -8,13 +8,18 @@ $(document).ready(function(){
       }),
       new textContent({
         contentTitre: "Bienvenue",
-        contentPara: "Ceci est un texte test",
+        contentPara: "Avec cette application vous pourrez réserver des vélos dans la ville de Lyon",
         isImage: false
       }),
       new Image({
         url: "img/pointer.png",
         altText: "Image de pointer",
         isImage: true
+      }),
+      new textContent({
+        contentTitre: "À quoi servent les marqueurs ?",
+        contentPara: "Grâce à ces pointer vous pourrez trouvez le vélo le plus proche de vous et le réserver",
+        isImage: false
       })
     ]
   });
