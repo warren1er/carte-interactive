@@ -48,5 +48,4 @@ $(document).ready(function(){
         console.log("erreur de code");
     }
   };
-  
 });
