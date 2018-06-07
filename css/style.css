@@ -74,5 +74,5 @@ img{
 /************** map **********/
 #map{
   height: 400px;
-  width: 640px
+  width: 100%;
 }
