@@ -49,4 +49,9 @@ $(document).ready(function(){
         console.log("erreur de code");
     }
   };
+
+  maCarte = new carte({
+    zoom: 10
+  });
+  maCarte.affCarte();
 });
