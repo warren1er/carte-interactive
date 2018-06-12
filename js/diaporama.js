@@ -1,29 +1,27 @@
 
 /* Function qui va chercher l'image et son texte alternatif */
-function Image(params){
-  this.url = params.url;
-  this.altText = params.altText;
-  this.isImage = params.isImage;
+/******* code problematique **************/
+
+function Picture(source){
+  this.url = source.url;
+  this.altText = source.altText;
+  this.isImage = source.isImage;
 }
 
 /*Function qui va chercher le le contenu du texte qui sera mis dans le slider pour creer une notice */
-function textContent(params){
- this.contentTitre = params.contentTitre;
- this.contentPara = params.contentPara;
- this.isImage = params.isImage;
+function textContent(source){
+ this.contentTitre = source.contentTitre;
+ this.contentPara = source.contentPara;
+ this.isImage = source.isImage;
 }
 
 
-function Slider(params){
-  this.dataTab = params.dataTab;
+function Slider(source){
+  this.dataTab = source.dataTab;
   this.dataContainer = document.getElementById('container') || null;
 
   this.compteur= 0 ;
 
-  this.addElt = function(url, text){
-    this.dataTab.push(new Image(url));
-    this.dataTab.push(new textContent(text));
-  }
 
   this.affSlider = function(){
 

@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var monSlider = new Slider({
     dataTab: [
-      new Image({
+      new Picture({
         url: "img/navigation.jpg",
         altText: "Image de google",
         isImage: true
@@ -11,7 +11,7 @@ $(document).ready(function(){
         contentPara: "Avec cette application vous pourrez réserver des vélos dans la ville de Lyon",
         isImage: false
       }),
-      new Image({
+      new Picture({
         url: "img/pointer.png",
         altText: "Image de pointer",
         isImage: true
@@ -23,6 +23,7 @@ $(document).ready(function(){
       })
     ]
   });
+
 
   monSlider.affSlider();
   var nextBouton = document.getElementById('next');
