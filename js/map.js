@@ -11,13 +11,14 @@ function carte(params){
       zoom: this.zoom
     })
 
+
     this.affMarker = function(){
       $.ajax({
           url : 'https://api.jcdecaux.com/vls/v1/stations?contract=Lyon&apiKey=bbe84f096138206b749ce0bff4ce49e697f87e35',
           type : 'GET',
           dataType : 'JSON',
           success : function(code_html, statut){
-              console.log('request bien partie');
+              //console.log('request bien partie');
 
           },
 
@@ -29,17 +30,28 @@ function carte(params){
             for (var i = 0; i < data.responseJSON.length; i++) {
               var marker = new google.maps.Marker({
                 position: data.responseJSON[i].position,
-                map: map
+                map: map,
+                click: function(){
+                  $('#name-address').html(data.responseJSON[i].name);
+                  $('#address').html(data.responseJSON[i].address);
+                  $('#banking').html(data.responseJSON[i].banking);
+                  $('#status').html(data.responseJSON[i].status);
+                  $('#available_bikes').html(data.responseJSON[i].available_bikes);
+                }
               });
 
-               console.log(marker);
+              /*marker.addListener('click', function(){
+                $('#name-address').html(data.responseJSON[i].name);
+                $('#address').html(data.responseJSON[i].address);
+                $('#banking').html(data.responseJSON[i].banking);
+                $('#status').html(data.responseJSON[i].status);
+                $('#available_bikes').html(data.responseJSON[i].available_bikes);
+
+              });*/
             }
           }
-
        });
-    }<!-- fin de affMarker -->
-    this.affReserv = function(){
-      
-    }
-  }<!-- fin affCarte -->
-}<!-- fin de carte -->
+    }/* fin de affMarker */
+
+  }/* fin affCarte */
+}
