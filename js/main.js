@@ -51,7 +51,8 @@ $(document).ready(function(){
   };
 
   maCarte = new carte({
-    zoom: 10
+    zoom: 12
   });
   maCarte.affCarte();
+  maCarte.affMarker();
 });
